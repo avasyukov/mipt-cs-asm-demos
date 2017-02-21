@@ -1,5 +1,5 @@
 ; Assemble:	nasm -f elf demo6.asm
-; Link:		ld -s -o demo6 demo6.o
+; Link:		ld -m elf_i386 -o demo6 demo6.o
 ; Run:		./demo6 test.txt
 
 section .data
