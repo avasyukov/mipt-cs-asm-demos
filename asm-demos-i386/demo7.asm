@@ -7,8 +7,6 @@
 
 	section .text
 main:
-	push	ebx			; we have to save this since we use it
-
 	mov	ecx, 40			; ecx will countdown from 40 to 0
 	xor	eax, eax		; eax will hold the current number
 	xor	ebx, ebx		; ebx will hold the next number
@@ -35,7 +33,6 @@ print:
 	dec	ecx			; count down
 	jnz	print			; if not done counting, do some more
 
-	pop	ebx			; restore ebx before returning
 	ret
 format:
 	db	'%10d', 0
